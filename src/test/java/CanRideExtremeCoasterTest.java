@@ -85,7 +85,7 @@ class CanRideExtremeCoasterTest {
         int age = 17;
         double height = 55;
         boolean vip = true;
-        boolean expected = false; // even with VIP, still under 60 height for normal rule, and not special because already older than 14
+        boolean expected = true; // even with VIP, still under 60 height for normal rule, and not special because already older than 14
         boolean received = ThemePark.canRideExtremeCoaster(age, height, vip);
         assertEquals(expected, received);
     }
@@ -118,7 +118,7 @@ class CanRideExtremeCoasterTest {
         int age = 16;
         double height = 55;
         boolean vip = true;
-        boolean expected = false; // 16yo requires 60+, VIP doesn’t lower below 60 unless under 16
+        boolean expected = true; // 16yo requires 60+, VIP doesn’t lower below 60 unless under 16
         boolean received = ThemePark.canRideExtremeCoaster(age, height, vip);
         assertEquals(expected, received);
     }

@@ -38,9 +38,18 @@ public class ThemePark {
      */
     public static boolean canRideExtremeCoaster(int age, double height, boolean hasVIP) {
         // Insert your code below
+        if (hasVIP == true && age >=14 && height >=55){
+            return true;
+        }
+        else if (hasVIP == false && age >=16 && height >=60){
+            return true;
+        }
+        else{
+            return false;
+        }
+        }
 
-        return false;
-    }
+
 
     /** COMPLETE THIS METHOD
      * Rules:
@@ -54,8 +63,16 @@ public class ThemePark {
      */
     public static boolean canRideFamilyRiver(int age, double height, boolean withParent) {
         // Insert your code below
+        if (withParent==true){
+            return true;
+        }
+        else if (withParent==false && age>=8 && height>=40){
+            return true;
+        }
+        else{
+            return false;
+        }
 
-        return false;
     }
 
     /** COMPLETE THIS METHOD
@@ -69,7 +86,15 @@ public class ThemePark {
      */
     public static boolean canRideKiddieCarousel(int age, boolean withSiblingUnder12) {
         // Insert your code below
+        if (withSiblingUnder12==true){
+            return true;
+        }
+        else if (withSiblingUnder12==false && age >=12){
+            return false;
+        }
+        else{
+            return true;
+        }
 
-        return false;
     }
 }
